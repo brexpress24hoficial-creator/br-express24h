@@ -13,8 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BR Express 24H",
-  description: "Central de Socorro Automotivo",
+  title: "BR Express24H",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
