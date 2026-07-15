@@ -43,9 +43,9 @@ export default function Header() {
         </nav>
 
         <Link
-          href="/atendimento"
-          className="bg-yellow-400 text-black font-bold px-6 py-3 rounded-xl hover:bg-yellow-300 transition"
-        >
+                      href="/solicitar"
+                      className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-xl transition"
+                    >
           Solicitar Atendimento
         </Link>
 
