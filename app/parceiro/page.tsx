@@ -1,99 +1,98 @@
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
-export default function Parceiro() {
+const servicos = [
+  {
+    emoji: "🚛",
+    titulo: "Guincho",
+    descricao: "Remoção de veículos 24 horas."
+  },
+  {
+    emoji: "🛞",
+    titulo: "Borracharia",
+    descricao: "Troca e reparo de pneus."
+  },
+  {
+    emoji: "🔧",
+    titulo: "Mecânica",
+    descricao: "Socorro mecânico emergencial."
+  },
+  {
+    emoji: "🔋",
+    titulo: "Auto Elétrica",
+    descricao: "Bateria, partida auxiliar e pane elétrica."
+  },
+  {
+    emoji: "🔑",
+    titulo: "Chaveiro",
+    descricao: "Abertura e cópia de chaves automotivas."
+  }
+];
+
+export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="bg-black text-white">
 
       {/* HERO */}
+
       <section className="relative overflow-hidden">
+
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-transparent"></div>
 
         <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
 
-          <div className="text-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <span className="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold">
-              BR EXPRESS 24H
-            </span>
+            <div>
 
-            <h1 className="mt-8 text-5xl md:text-7xl font-extrabold">
-              Seja um <span className="text-yellow-400">Parceiro</span>
-            </h1>
+              <span className="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold">
+                Atendimento 24 Horas
+              </span>
 
-            <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-              Cadastre sua empresa e receba solicitações de clientes
-              automaticamente através da plataforma BR Express 24H.
-            </p>
+              <h1 className="text-6xl font-extrabold mt-8 leading-tight">
 
-            <div className="mt-10 flex justify-center gap-4 flex-wrap">
+                Precisou de
+                <span className="text-yellow-400"> Socorro Automotivo?</span>
 
-              <a
-                href="#planos"
-                className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-xl transition"
-              >
-                Ver Planos
-              </a>
+              </h1>
 
-              <Link
-                href="/parceiro/login"
-                className="border border-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-xl transition"
-              >
-                Entrar na Área do Parceiro
-              </Link>
+              <p className="mt-8 text-xl text-gray-300">
+
+                A BR Express 24H conecta você ao parceiro mais próximo
+                para atendimento rápido, seguro e confiável.
+
+              </p>
+
+              <div className="flex flex-wrap gap-4 mt-10">
+
+                <Link
+                  href="/solicitar"
+                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-xl transition"
+                >
+                  Solicitar Atendimento
+                </Link>
+
+                <Link
+                  href="/parceiro"
+                  className="border border-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-xl transition"
+                >
+                  Seja Parceiro
+                </Link>
+
+              </div>
 
             </div>
 
-          </div>
+            <div className="flex justify-center">
 
-        </div>
-      </section>
+              {/* Depois vamos colocar sua arte aqui */}
 
-      {/* BENEFÍCIOS */}
+              <div className="w-full h-[450px] rounded-3xl border-2 border-dashed border-yellow-400 flex items-center justify-center text-center text-zinc-500">
 
-      <section className="py-20">
+                SUA ARTE AQUI
 
-        <div className="max-w-6xl mx-auto px-6">
+              </div>
 
-          <h2 className="text-4xl font-bold text-center mb-14">
-            Por que fazer parte?
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
-              <h3 className="text-yellow-400 text-xl font-bold mb-3">
-                🚨 Mais Clientes
-              </h3>
-              <p className="text-gray-400">
-                Receba chamados automaticamente da sua região.
-              </p>
-            </div>
-
-            <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
-              <h3 className="text-yellow-400 text-xl font-bold mb-3">
-                💰 Mais Faturamento
-              </h3>
-              <p className="text-gray-400">
-                Aumente sua renda com novos atendimentos.
-              </p>
-            </div>
-
-            <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
-              <h3 className="text-yellow-400 text-xl font-bold mb-3">
-                📈 Painel Completo
-              </h3>
-              <p className="text-gray-400">
-                Controle chamados, pagamentos e histórico.
-              </p>
-            </div>
-
-            <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
-              <h3 className="text-yellow-400 text-xl font-bold mb-3">
-                ⭐ Destaque
-              </h3>
-              <p className="text-gray-400">
-                Ganhe visibilidade para milhares de clientes.
-              </p>
             </div>
 
           </div>
@@ -102,122 +101,118 @@ export default function Parceiro() {
 
       </section>
 
-      {/* PLANOS */}
+      {/* SERVIÇOS */}
 
-      <section id="planos" className="pb-24">
+      <section className="py-20 bg-zinc-950">
 
         <div className="max-w-7xl mx-auto px-6">
 
           <h2 className="text-5xl font-bold text-center mb-16">
-            Escolha seu Plano
+
+            Nossos Serviços
+
           </h2>
 
-          <div className="grid lg:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
 
-            {/* Básico */}
+            {servicos.map((item) => (
 
-            <div className="bg-zinc-900 rounded-3xl p-10 border border-zinc-800">
-
-              <h3 className="text-3xl font-bold mb-4">BÁSICO</h3>
-
-              <p className="text-5xl font-extrabold text-yellow-400 mb-8">
-                R$49,90
-              </p>
-
-              <ul className="space-y-4 text-gray-300">
-
-                <li>✔ Perfil da empresa</li>
-
-                <li>✔ Recebimento de chamados</li>
-
-                <li>✔ Suporte</li>
-
-                <li>✔ Atualização dos dados</li>
-
-              </ul>
-
-              <Link
-                href="/parceiro/cadastro?plano=basico"
-                className="mt-10 block text-center bg-yellow-400 text-black font-bold py-4 rounded-xl hover:bg-yellow-300"
+              <div
+                key={item.titulo}
+                className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-yellow-400 transition"
               >
-                ASSINAR PLANO
-              </Link>
 
-            </div>
+                <div className="text-5xl">
+                  {item.emoji}
+                </div>
 
-            {/* Premium */}
+                <h3 className="text-2xl font-bold mt-5">
 
-            <div className="bg-yellow-400 rounded-3xl p-10 text-black scale-105 shadow-2xl">
+                  {item.titulo}
 
-              <div className="text-center mb-5">
+                </h3>
 
-                <span className="bg-black text-yellow-400 px-4 py-2 rounded-full font-bold">
-                  MAIS VENDIDO
-                </span>
+                <p className="text-gray-400 mt-4">
+
+                  {item.descricao}
+
+                </p>
 
               </div>
 
-              <h3 className="text-3xl font-bold mb-4">
-                PREMIUM
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* COMO FUNCIONA */}
+
+      <section className="py-24">
+
+        <div className="max-w-6xl mx-auto px-6">
+
+          <h2 className="text-5xl font-bold text-center mb-16">
+
+            Como Funciona
+
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10">
+
+            <div className="text-center">
+
+              <div className="text-6xl mb-5">📍</div>
+
+              <h3 className="text-2xl font-bold">
+
+                Solicite
+
               </h3>
 
-              <p className="text-5xl font-extrabold mb-8">
-                R$99,90
+              <p className="text-gray-400 mt-4">
+
+                Informe sua localização e o problema.
+
               </p>
-
-              <ul className="space-y-4">
-
-                <li>✔ Destaque na plataforma</li>
-
-                <li>✔ Prioridade nos chamados</li>
-
-                <li>✔ Relatórios</li>
-
-                <li>✔ Selo Premium</li>
-
-                <li>✔ Suporte prioritário</li>
-
-              </ul>
-
-              <Link
-                href="/parceiro/cadastro?plano=premium"
-                className="mt-10 block text-center bg-black text-yellow-400 font-bold py-4 rounded-xl"
-              >
-                ASSINAR PLANO
-              </Link>
 
             </div>
 
-            {/* Empresa */}
+            <div className="text-center">
 
-            <div className="bg-zinc-900 rounded-3xl p-10 border border-zinc-800">
+              <div className="text-6xl mb-5">🚀</div>
 
-              <h3 className="text-3xl font-bold mb-4">
-                EMPRESA
+              <h3 className="text-2xl font-bold">
+
+                Encontramos
+
               </h3>
 
-              <p className="text-5xl font-extrabold text-yellow-400 mb-8">
-                Consulte
+              <p className="text-gray-400 mt-4">
+
+                Localizamos o parceiro mais próximo.
+
               </p>
 
-              <ul className="space-y-4 text-gray-300">
+            </div>
 
-                <li>✔ Várias unidades</li>
+            <div className="text-center">
 
-                <li>✔ Atendimento personalizado</li>
+              <div className="text-6xl mb-5">✅</div>
 
-                <li>✔ Recursos exclusivos</li>
+              <h3 className="text-2xl font-bold">
 
-                <li>✔ Suporte dedicado</li>
+                Atendimento
 
-              </ul>
+              </h3>
 
-              <Link
-                href="/contato"
-                className="mt-10 block text-center border border-yellow-400 py-4 rounded-xl hover:bg-yellow-400 hover:text-black"
-              >
-                FALE CONOSCO
-              </Link>
+              <p className="text-gray-400 mt-4">
+
+                O profissional vai até você rapidamente.
+
+              </p>
 
             </div>
 
@@ -226,6 +221,37 @@ export default function Parceiro() {
         </div>
 
       </section>
+
+      {/* CTA */}
+
+      <section className="bg-yellow-400 py-20">
+
+        <div className="max-w-5xl mx-auto text-center px-6">
+
+          <h2 className="text-5xl font-extrabold text-black">
+
+            Precisa de ajuda agora?
+
+          </h2>
+
+          <p className="text-black text-xl mt-6">
+
+            Solicite atendimento em poucos segundos.
+
+          </p>
+
+          <Link
+            href="/solicitar"
+            className="inline-block mt-10 bg-black text-yellow-400 px-10 py-5 rounded-xl font-bold hover:bg-zinc-900 transition"
+          >
+            Solicitar Atendimento
+          </Link>
+
+        </div>
+
+      </section>
+
+      <Footer />
 
     </main>
   );
