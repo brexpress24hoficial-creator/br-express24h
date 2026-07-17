@@ -65,21 +65,21 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4 mt-10">
 
-                <Link
-                  href="/solicitar"
-                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-xl transition"
-                >
-                  Solicitar Atendimento
-                </Link>
+  <Link
+    href="/solicitar"
+    className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-xl transition"
+  >
+    Solicitar Atendimento
+  </Link>
 
-                <Link
-                  href="/parceiro"
-                  className="border border-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-xl transition"
-                >
-                  Seja Parceiro
-                </Link>
+  <Link
+    href="/parceiro"
+    className="border border-yellow-400 hover:bg-yellow-400 hover:text-black font-bold px-8 py-4 rounded-xl transition"
+  >
+    Área do Parceiro
+  </Link>
 
-              </div>
+</div>
 
             </div>
 
