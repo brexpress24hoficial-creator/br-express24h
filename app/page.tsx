@@ -88,12 +88,7 @@ export default function Home() {
 
             <div>
 
-              <img
-                src="/hero-guincho.png"
-                alt="Guincho"
-                className="w-full"
-              />
-
+              
             </div>
 
           </div>
