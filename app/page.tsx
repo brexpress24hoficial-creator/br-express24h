@@ -76,11 +76,11 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  href="/parceiros"
-                  className="border border-yellow-500 px-8 py-4 rounded-xl hover:bg-yellow-500 hover:text-black transition"
-                >
-                  Seja Parceiro
-                </Link>
+  href="/parceiro"
+  className="border border-yellow-500 px-8 py-4 rounded-xl hover:bg-yellow-500 hover:text-black transition"
+>
+  Seja Parceiro
+</Link>
 
               </div>
 
@@ -89,6 +89,7 @@ export default function Home() {
             <div>
 
               
+            
             </div>
 
           </div>
