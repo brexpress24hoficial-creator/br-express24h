@@ -78,39 +78,57 @@ width: `${Math.min((etapa / 6) * 100, 100)}%`              }}
         <div className="bg-[#171717] rounded-3xl p-8 mt-12 border border-zinc-800">
 {enviado && (
 
-<div className="text-center py-12">
+<div className="text-center py-16">
 
-<div className="text-7xl">
-🎉
-</div>
+  <div className="text-7xl mb-6">
+    🎉
+  </div>
 
-<h2 className="text-4xl font-bold text-yellow-400 mt-6">
-Cadastro enviado com sucesso!
-</h2>
+  <h2 className="text-4xl font-bold text-yellow-400">
+    Solicitação enviada com sucesso!
+  </h2>
 
-<p className="text-zinc-300 mt-6 text-lg">
-Recebemos o seu cadastro.
-</p>
+  <p className="text-zinc-300 text-lg mt-8">
+    Recebemos sua solicitação para fazer parte da rede de parceiros da
+    <span className="font-bold text-yellow-400"> BR EXPRESS 24H</span>.
+  </p>
 
-<p className="text-zinc-400 mt-2">
-Nossa Central BR EXPRESS 24H irá analisar todas as informações.
-</p>
+  <p className="text-zinc-400 mt-5 leading-8">
+    Nossa Central analisará todas as informações enviadas para garantir a qualidade e a segurança da nossa plataforma.
+  </p>
 
-<div className="mt-8 bg-[#0B0B0B] border border-zinc-800 rounded-2xl p-6">
+  <div className="bg-[#0B0B0B] border border-zinc-800 rounded-2xl p-8 mt-10 text-left">
 
-<p className="mb-3">
-📧 Entraremos em contato pelo e-mail cadastrado.
-</p>
+    <h3 className="text-yellow-400 font-bold text-2xl mb-6">
+      O que acontece agora?
+    </h3>
 
-<p>
-📱 Também enviaremos uma mensagem pelo WhatsApp informado.
-</p>
+    <div className="space-y-4 text-zinc-300">
 
-</div>
+      <p>✅ Seu cadastro foi enviado para nossa Central.</p>
 
-<p className="mt-8 text-zinc-500">
-Você será redirecionado para a tela de login...
-</p>
+      <p>📋 Nossa equipe irá analisar as informações cadastradas.</p>
+
+      <p>📧 Entraremos em contato pelo e-mail informado.</p>
+
+      <p>📱 Também entraremos em contato pelo WhatsApp cadastrado.</p>
+
+      <p>🔒 Após a aprovação, seu acesso ao Painel do Parceiro será liberado.</p>
+
+    </div>
+
+  </div>
+
+  <p className="text-zinc-500 mt-10">
+    Obrigado por escolher fazer parte da BR EXPRESS 24H.
+  </p>
+
+  <button
+    onClick={() => window.location.href = "/"}
+    className="mt-10 bg-yellow-400 text-black px-10 py-4 rounded-xl font-bold hover:scale-105 transition"
+  >
+    Voltar para a Página Inicial
+  </button>
 
 </div>
 
@@ -910,6 +928,8 @@ Após enviar, nossa equipe analisará seu cadastro.
 )}
 
           {/* BOTÕES */}
+
+
 
           <div className="flex justify-between mt-10">
 
