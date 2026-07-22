@@ -75,7 +75,7 @@ export default function Home() {
                   Solicitar Atendimento
                 </Link>
 
-                <Link
+               <Link
   href="/parceiro"
   className="border border-yellow-500 px-8 py-4 rounded-xl hover:bg-yellow-500 hover:text-black transition"
 >
