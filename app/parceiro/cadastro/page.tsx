@@ -4,8 +4,9 @@ import { useState } from "react";
 
 export default function CadastroParceiroPage() {
 
-  const [etapa, setEtapa] = useState(1);
+const [etapa, setEtapa] = useState(1);
 
+const [enviado, setEnviado] = useState(false);
 
   return (
     <main className="min-h-screen bg-[#0B0B0B] text-white">
@@ -76,8 +77,45 @@ export default function CadastroParceiroPage() {
 
 
         <div className="bg-[#171717] rounded-3xl p-8 mt-12 border border-zinc-800">
+{enviado && (
 
+<div className="text-center py-12">
 
+<div className="text-7xl">
+🎉
+</div>
+
+<h2 className="text-4xl font-bold text-yellow-400 mt-6">
+Cadastro enviado com sucesso!
+</h2>
+
+<p className="text-zinc-300 mt-6 text-lg">
+Recebemos o seu cadastro.
+</p>
+
+<p className="text-zinc-400 mt-2">
+Nossa Central BR EXPRESS 24H irá analisar todas as informações.
+</p>
+
+<div className="mt-8 bg-[#0B0B0B] border border-zinc-800 rounded-2xl p-6">
+
+<p className="mb-3">
+📧 Entraremos em contato pelo e-mail cadastrado.
+</p>
+
+<p>
+📱 Também enviaremos uma mensagem pelo WhatsApp informado.
+</p>
+
+</div>
+
+<p className="mt-8 text-zinc-500">
+Você será redirecionado para a tela de login...
+</p>
+
+</div>
+
+)}
 
           {/* ETAPA 1 */}
 
@@ -905,7 +943,8 @@ Após enviar, nossa equipe analisará seu cadastro.
 
 
           </div>
-
+              
+            )}
 
 
         </div>
