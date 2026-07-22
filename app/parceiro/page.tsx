@@ -24,7 +24,7 @@ export default function ParceiroPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-5 mt-12">
 
             <Link
-              href="/parceiro/cadastro"
+              href="/parceiro/segmento"
               className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
             >
               Quero ser Parceiro
