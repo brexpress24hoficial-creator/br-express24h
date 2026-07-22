@@ -45,8 +45,8 @@ const [enviado, setEnviado] = useState(false);
           <div className="flex justify-between text-sm text-zinc-400 mb-3">
 
             <span>
-              Etapa {etapa} de 6
-            </span>
+Etapa {Math.min(etapa, 6)} de 6            
+</span>
 
             <span>
               {Math.round((etapa / 6) * 100)}%
@@ -61,8 +61,7 @@ const [enviado, setEnviado] = useState(false);
             <div
               className="bg-yellow-400 h-3 rounded-full transition-all"
               style={{
-                width:`${(etapa / 6) * 100}%`
-              }}
+width: `${Math.min((etapa / 6) * 100, 100)}%`              }}
             />
 
           </div>
@@ -931,23 +930,39 @@ Após enviar, nossa equipe analisará seu cadastro.
 
 
             <button
+  onClick={() => {
 
-              onClick={() => setEtapa(etapa + 1)}
+    if (etapa < 6) {
 
-              className="bg-yellow-400 text-black px-8 py-3 rounded-xl font-bold"
-            >
+      setEtapa(etapa + 1);
 
-              Continuar →
+    } else {
 
-            </button>
+      setEnviado(true);
+
+      setTimeout(() => {
+
+        window.location.href = "/parceiro/login";
+
+      }, 5000);
+
+    }
+
+  }}
+
+  className="bg-yellow-400 text-black px-8 py-3 rounded-xl font-bold hover:scale-105 duration-300"
+>
+
+{etapa === 6 ? "Finalizar Cadastro" : "Continuar →"}
+
+</button>
 
 
           </div>
-              
-            )}
 
 
-        </div>
+
+</div>
 
 
       </div>
